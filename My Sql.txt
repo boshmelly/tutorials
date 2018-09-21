@@ -1,0 +1,39 @@
+
+
+- Moved to directory downloads.
+$ cd/Downloads
+
+- Mysql- Downloads-Community 
+After right clicking on the download section address is below. 
+$ wget
+https://dev.mysql.com/get/mysql-apt-config_0.8.10-1_all.deb
+
+- ls prompt shows
+mysql in the directory
+
+-Now its time to unveil the package 
+Installing mysql, with initial repository settings.
+$ sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb
+
+-check for the update of the mysql software
+$ sudo apt update
+then to refresh your package cache
+$ sudo apt-get update 
+
+root password during the configuration phase of the installation,after then on completion prompted for encryption but i opted out of it.
+
+to check if the system is running & active.
+$ sudo systemctl status mysql
+i made a mistake writing 'systemct1' instead of systemctl
+
+showing that its active & the duration since its been active.
+
+we now move to security settings. 
+validate password plugin but it will even prompt you for root password.
+
+-mysql_secure_installation
+this prompts for different question in configuring the server & its ways. Including things like allowing root access to be guessed remotely, & then reloading privileges.
+
+$ mysqladmin -u root -p version
+this prompts for my admin password.
+Outputs version 8.0.12
