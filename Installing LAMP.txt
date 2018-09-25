@@ -1,0 +1,25 @@
+After re installing Ubuntu, & Unbuntu clone ( using a right click drop down option). Its time for me to connect the machine to the internet as it doesn't seem to working to get the apt install command working.
+
+Unfortunately for me,after deleting & re-installing Ubuntu i found out its not about the OS but about the command from the instructional video.
+
+"SU -" didn't work for me
+instead i used "sudo apt-get update"
+
+which worked perfectly. as i did the same to "sudo apt-get install lamp-server^ ".
+
+-- After succesfully getting past the downloads,its time to get some files in with mysql. 
+
+"CREATE DATABASE wordpressdb;" prompted error message of wrong syntax. Then i decided to try it without the case sensitivity whcih then worked out just fine "create database wordpressdb;". same with "create user wordpressuser@localhost" identified by 'wordpresspassword'.
+
+"GRANT ALL PRIVILEGES ON wordpressdb.* TO wordpressuser@localhost;"
+
+FLUSH PRIVILEGES;
+
+Step 4 - Installing Wordpress
+"wget http://wordpress.org/latest.zip" and a few other commands including "chown -R www-data:www-data /var/www/html/wordpress/wp-content/upload"
+
+I couldn't get my ip address using ifconfig so i had to run "apt install net-tool"
+
+what a pain the inet address was to find. But your pc needs not to be browsing for it to provide you with a valid inet ip.Had to double check the adapter made sure it was on bridged adapter with drop down "name" been "gigabyte network". After the ip address is produced we then add it to the address http://ipaddress.wordpress; this should promt to the home page set up requesting language,username & password amongst others on occasion where it presents extension error run comman "apt-get install php7.0-mysql"
+
+after logging in with the provided details our LAMP is full installed with a wordpress database.
